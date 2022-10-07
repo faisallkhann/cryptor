@@ -1,6 +1,7 @@
 from cryptography.fernet import Fernet
 import os
 from pathlib import Path
+from colorama import Fore, Back, Style
 
 def dec(a):
     with open('fernet.key', 'rb') as fk:
@@ -35,6 +36,20 @@ def dec_all(a):
     for filename in os.listdir(a):
         dec(f"{a}\\{filename}")
 
+
+banner0= print(Fore.RED + ''' 
+
+ ▄████████    ▄████████ ▄██   ▄      ▄███████▄     ███      ▄██████▄     ▄████████ 
+███    ███   ███    ███ ███   ██▄   ███    ███ ▀█████████▄ ███    ███   ███    ███ 
+███    █▀    ███    ███ ███▄▄▄███   ███    ███    ▀███▀▀██ ███    ███   ███    ███ 
+███         ▄███▄▄▄▄██▀ ▀▀▀▀▀▀███   ███    ███     ███   ▀ ███    ███  ▄███▄▄▄▄██▀ 
+███        ▀▀███▀▀▀▀▀   ▄██   ███ ▀█████████▀      ███     ███    ███ ▀▀███▀▀▀▀▀   
+███    █▄  ▀███████████ ███   ███   ███            ███     ███    ███ ▀███████████ 
+███    ███   ███    ███ ███   ███   ███            ███     ███    ███   ███    ███ 
+████████▀    ███    ███  ▀█████▀   ▄████▀         ▄████▀    ▀██████▀    ███    ███ 
+             ███    ███                                                 ███    ███ 
+v1.5                                                      Developed by Faisal Khan
+''')
 
 banner = print(''' 
 Please Enter Your Choice.
